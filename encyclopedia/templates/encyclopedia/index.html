@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} Encyclopedia
+{%endblock %} {% block body %}
+<div style="margin-top: 3rem; margin-left: 3rem;">
+  <h2 style="font-family:'Linux Libertine',sans-serif; font-style: normal; font-weight: bold;">All Pages</h2>
+  <ul style="font-size: large;">
+    {% for entry in entries %}
+    <a href="{% url 'entry' entry %}"><li>{{ entry }}</li></a>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
